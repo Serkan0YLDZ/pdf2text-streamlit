@@ -345,7 +345,7 @@ def show():
 
             elif option == "Camelot (Tables Only)":
                 st.subheader("Camelot Table Extraction")
-                camelot_mode = "Lattice"
+                camelot_mode = "stream"
                 pages_param = "all"
 
                 try:
