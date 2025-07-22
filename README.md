@@ -2,7 +2,7 @@
 
 Streamlit based web application for extracting text from PDF files.
 
-![pdf2text.gif](pdf2text.gif)
+<video controls src="pdf2text.mp4" title="Title"></video>
 
 ## Supported Methods
 
