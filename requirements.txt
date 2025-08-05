@@ -5,9 +5,14 @@ pymupdf4llm
 pdfplumber
 camelot-py[base]
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.1.0
-torchvision==0.16.0
-torchaudio==2.1.0
+torch
 unstructured[pdf]
 opencv-python-headless
 pydantic
+paddlepaddle==3.1.0 --index-url https://www.paddlepaddle.org.cn/packages/stable/cpu/
+paddleocr
+img2table
+pdf2image
+pillow
+numpy
+pandas

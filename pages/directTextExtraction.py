@@ -35,6 +35,8 @@ def show():
                     "PDFplumber",
                     "Camelot (Tables Only)",
                     "Unstructured (Fast Strategy)",
+                    "Unstructured (Fast Strategy)",
+                    "Unstructured (Table Extraction)",
                 ],
             )
 
@@ -196,7 +198,7 @@ def show():
                                     image_bytes,
                                     caption=f"Page {page_num + 1} - Image {i+1} (.{image_ext})",
                                 )
-                        
+
                 doc.close()
 
             elif option == "PDFplumber":
@@ -345,12 +347,12 @@ def show():
 
             elif option == "Camelot (Tables Only)":
                 st.subheader("Camelot Table Extraction")
-                camelot_mode = "stream"
+                camelot_option = st.radio("Select Camelot mode:", ["Stream", "Lattice"])
                 pages_param = "all"
 
                 try:
                     tables = camelot.read_pdf(
-                        file_path, flavor=camelot_mode.lower(), pages=pages_param
+                        file_path, flavor=camelot_option.lower(), pages=pages_param
                     )
 
                     if len(tables) > 0:

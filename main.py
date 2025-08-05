@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from pages import upload, directTextExtraction
+from pages import upload, directTextExtraction, ocrTextExtraction
 
 
 st.set_page_config(page_title="PDF to Text Converter", layout="wide")
@@ -26,8 +26,8 @@ menu_key = f"menu_{st.session_state.get('force_menu_update', 0)}"
 
 selected = option_menu(
     None,
-    ["Upload", "Direct Text Extraction"],
-    icons=["cloud-upload", "list-task"],
+    ["Upload", "Direct Text Extraction", "OCR Text Extraction"],
+    icons=["cloud-upload", "list-task", "search"],
     key=menu_key,
     orientation="horizontal",
     default_index=default_index,
@@ -39,3 +39,5 @@ if selected == "Upload":
     upload.show()
 elif selected == "Direct Text Extraction":
     directTextExtraction.show()
+elif selected == "OCR Text Extraction":
+    ocrTextExtraction.show()
