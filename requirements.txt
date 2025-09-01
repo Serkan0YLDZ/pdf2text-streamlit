@@ -1,18 +1,21 @@
+opencv-python-headless<4.9.0
 streamlit==1.47.0
 streamlit_option_menu
 streamlit_pdf_viewer
 pymupdf4llm
 pdfplumber
 camelot-py[base]
+numpy<2.0
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch
+torch==2.2.0+cpu
+torchvision==0.17.0+cpu
+torchaudio==2.2.0+cpu
 unstructured[pdf]
-opencv-python-headless
 pydantic
-paddlepaddle==3.1.0 --index-url https://www.paddlepaddle.org.cn/packages/stable/cpu/
+paddlepaddle 
 paddleocr
 img2table
-pdf2image
-pillow
-numpy
-pandas
+# deepdoctection kaldırıldı - uyumsuzluk nedeniyle
+pdfplumber
+transformers==4.37.0
+layoutparser
